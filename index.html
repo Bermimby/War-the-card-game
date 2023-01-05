@@ -7,13 +7,46 @@
     <title>WAR</title>
     <link rel="stylesheet" href="css/main.css" 
     type="text/css"> 
-    
+    <link rel="stylesheet" href="card-deck-css/css/cardstarter.css">
+    <script src="js.main.js" defer></script>
 
 </head>
 <body>
-    <h1>Hello</h1>
+   <div class="container">
+    <h1>War The Card Game</h1>
+       <h2 id="playerOne">Player One    </h2>         
+       
+          <div id="top">
+       <div class="card back player"></div>  
+       <div id = "playercard"class="card  "></div>  
+       </div>
+       
+
+       
+
+        
+    </div>
+        
+      <div id="buttons">
+    <button id="drawbutton"> Draw Cards </button>
+
+    <p>Shuffle Cards for a New Game </p>
+    <button id="shufflebutton">Shuffle Cards</button>
+      </div>
+        <h3 id= "playerTwo"></h3>Player Two</h3>
+        <div id=plyr1Score ></div>
+        <div class="player1Hand"></div>
+
+       
+        <div id="bottom">
+       
+        <div class=" card back cpu"></div>
+        <div id=plyr2Score ></div>
+        <div class="player2Hand"></div>
+        <div id = "compcard" class="card"></div>  
+        </div>
+
+     </div>
     
 </body>
-
-<script src="js.main.js" ></script>
 </html>

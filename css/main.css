@@ -2,6 +2,83 @@
     box-sizing: border-box;
 }
 
-h1 {
-    color: green;
+h1{
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+h2,h3{
+        color: black;
+        text-align: left;
+        font-size:large;
+
+
+
+
+}
+body {
+    background-color: green;
+    display: inline;
+    
+    
+    
+    
+    
+    
+    
+}
+
+#btn{
+    
+    background-color: white;
+    height:30%;
+    width:20%;
+    align-self: center;
+}
+#shuffle {
+    height:30%;
+    width:20%;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:90%;
+    width:70%;
+    
+}
+
+
+.card.back.player{
+    font-size: xx-large;
+    
+}
+
+.card.back.cpu{
+    font-size:xx-large;
+}
+
+
+#playercard.card{
+    font-size: xx-large;
+    align-self: flex-end;
+}
+
+
+#compcard.card{
+    font-size: xx-large;
+    align-self:flex-end ;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#bottom,#top{
+    display: flex;
+    
+
 }
