@@ -1,5 +1,5 @@
 # War-the-card-game
-This game was built using HTML,CSS, and Javascript.
+Technologies Used:HTML,CSS, and Javascript.
 This game is a simple but fun game where the higher card wins. The first player to have the whole deck of cards wins the game!.
 
 
@@ -9,4 +9,4 @@ This game is a simple but fun game where the higher card wins. The first player 
 
 <img width="1440" alt="Screen Shot 2023-01-06 at 12 15 24 AM" src="https://user-images.githubusercontent.com/102707880/210935410-0d2e1edd-308d-4327-91aa-f25ff2025f4b.png">
 
-
+Planned future enhancements: Display the score on the webpage,make the actual cards flip once clicked on.
