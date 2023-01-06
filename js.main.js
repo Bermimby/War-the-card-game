@@ -34,6 +34,9 @@ const shufflebutton = document.getElementById('shufflebutton')
 const compcard = document.getElementById('compcard')
 const plyr1Score = document.getElementById('plyr1Score')
 const plyr2Score= document.getElementById('plyr2Score')
+let h3El = document.getElementById("winnermessage") 
+let h4El = document.getElementById("tiemessage")
+
 
 
 
@@ -43,6 +46,7 @@ const plyr2Score= document.getElementById('plyr2Score')
 
 button.addEventListener('click',flipCard)
 shufflebutton.addEventListener('click',dealHand)
+playercard.addEventListener
 
 
 
@@ -74,12 +78,20 @@ function shuffleDeck(deck) {
 function dealHand() {
         player1Hand = deck.slice(0, 26)
         console.log(player1Hand)
-        player2Hand = deck.slice(26, 52)
+        player2Hand = deck.slice(26, 53)
         console.log(player2Hand)
     }
 function flipCard() {
-        const player1card = player1Hand.pop()
-        const player2card = player2Hand.pop()
+        let player1card
+        if(player1Hand.length){
+             player1card  = player1Hand.pop()  
+        }
+        let player2card
+        if(player2Hand.length){
+             player2card = player2Hand.pop()
+        }
+        
+        
         playercard.classList[1] ? playercard.classList.replace(playercard.classList[1], player1card.face)  : playercard.classList.add(player1card.face)
         compcard.classList[1] ? compcard.classList.replace(compcard.classList[1], player2card.face)  : compcard.classList.add(player2card.face)
         compareCards(player1card, player2card)
@@ -91,19 +103,51 @@ function renderScore() {
         player1.innerText= `playercard count ${player1Hand.length}`
         player2.innerText= `compcard count ${player2Hand.length}`
     }
+    
 
     
     
 
 
 function compareCards(player1card, player2card) {
-        if(player1card.value > player2card.value) {
+        if (player1card.value > player2card.value){
+            player1Hand.unshift(player1card,player2card)
             console.log("Player 1 Wins this draw!")
-        } else {
-            console.log("Player 2 Wins this draw!")
-        }
-    }
+            h3El.innerHTML = "Player 1 Wins this draw"
 
+        } else if (player2Hand.unshift(player2card,player1card)) {
+            console.log("Player 2 Wins this draw!")
+            h3El.innerHTML = "Player 2 Wins this draw"
+            }
+            else{
+                player1card===player2card
+                console.log("War! Draw Again")
+                h4El.innerHTML = "WAR! DRAW AGAIN!"
+                
+
+            }
+            endOfGame()
+        }
+        
+
+function endOfGame(){
+         console.log(player1Hand,"player1Hand")
+         if(player1Hand.length === 0){
+            h3El.innerHTML = 'Player One Lost! Player 2 Wins'
+            console.log("Player Two Wins")
+          }else{
+        //    player2Hand.length===0 
+           console.log("Player One Wins")
+          }
+}
+
+         
+
+
+
+        
+    
+        
 
 
 
@@ -114,6 +158,7 @@ function compareCards(player1card, player2card) {
         shuffleDeck(deck)
         dealHand()
         renderScore()
+        
         }
 
 init()
