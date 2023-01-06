@@ -29,11 +29,9 @@ let score, player1Hand, player2Hand
 
 // cached element
 const button = document.getElementById('drawbutton') 
-const playercard = document.getElementById('playercard')
 const shufflebutton = document.getElementById('shufflebutton')
+const playercard = document.getElementById('playercard')
 const compcard = document.getElementById('compcard')
-const plyr1Score = document.getElementById('plyr1Score')
-const plyr2Score= document.getElementById('plyr2Score')
 let h3El = document.getElementById("winnermessage") 
 let h4El = document.getElementById("tiemessage")
 
@@ -120,7 +118,7 @@ function compareCards(player1card, player2card) {
             h3El.innerHTML = "Player 2 Wins this draw"
             }
             else{
-                player1card===player2card
+                player1card === player2card
                 console.log("War! Draw Again")
                 h4El.innerHTML = "WAR! DRAW AGAIN!"
                 
