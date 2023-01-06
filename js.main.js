@@ -46,7 +46,7 @@ let h4El = document.getElementById("tiemessage")
 
 button.addEventListener('click',flipCard)
 shufflebutton.addEventListener('click',dealHand)
-playercard.addEventListener
+
 
 
 
@@ -136,10 +136,11 @@ function endOfGame(){
             h3El.innerHTML = 'Player One Lost! Player 2 Wins'
             console.log("Player Two Wins")
           }else{
-        //    player2Hand.length===0 
-           console.log("Player One Wins")
+        console.log("Player One Wins")
           }
 }
+
+
 
          
 
